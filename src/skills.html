@@ -4,42 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Showcase Hub — Skills</title>
-  <!-- Link to external CSS -->
+
+  <!-- ✅ Correct link -->
   <link rel="stylesheet" href="../styles/style.css">
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="nav">
-      <div class="brand">Showcase Hub</div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="projects.html">Projects</a>
-        <a class="active" href="skills.html">Skills</a>
-        <a href="achievements.html">Achievements</a>
-      </div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <h1 class="logo">Showcase Hub</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <section class="grid">
-      <article class="card">
-        <h1>Skills</h1>
-        <table class="skills-table">
-          <thead>
-            <tr>
-              <th>Skill</th>
-              <th>Category</th>
-              <th>Proficiency</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>HTML & CSS</td><td>Technical</td><td>Advanced</td></tr>
-            <tr><td>JavaScript</td><td>Technical</td><td>Intermediate</td></tr>
-            <tr><td>Git & GitHub</td><td>Technical</td><td>Intermediate</td></tr>
-            <tr><td>Communication</td><td>Soft</td><td>Advanced</td></tr>
-            <tr><td>Teamwork</td><td>Soft</td><td>Advanced</td></tr>
-          </tbody>
-        </table>
-      </article>
+  <main class="wrapper">
+    <section class="skills-section">
+      <h2>Professional <span>Skillset</span></h2>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-solid fa-code"></i><p>C++</p></div>
+        <div class="skill-box"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+        <div class="skill-box"><i class="fa-brands fa-node-js"></i><p>Node.js</p></div>
+        <div class="skill-box"><i class="fa-brands fa-react"></i><p>React</p></div>
+
+        <div class="skill-box"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+        <div class="skill-box"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+        <div class="skill-box"><i class="fa-brands fa-bootstrap"></i><p>Bootstrap</p></div>
+        <div class="skill-box"><i class="fa-solid fa-database"></i><p>MySQL</p></div>
+      </div>
     </section>
   <footer class="site-footer">
       <p>© 2025 Showcase Hub | Built by Team Phoenix</p>
