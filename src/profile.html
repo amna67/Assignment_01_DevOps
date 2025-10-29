@@ -13,13 +13,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container">
-      <a class="logo" href="/" aria-label="Go to home">My Portfolio</a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-      </nav>
-    </div>
+ <!-- ===== HEADER & NAVIGATION ===== -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <h1 class="logo">Showcase Hub</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container" id="main" role="main">
@@ -81,15 +86,9 @@
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <small>© <span id="year"></span> Talha Ahmad — Built with ❤️</small>
-    </div>
+ <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>© 2025 Showcase Hub | Built by Team Phoenix</p>
   </footer>
-
-  <script>
-    // small script to set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
