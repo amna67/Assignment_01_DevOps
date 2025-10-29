@@ -90,6 +90,7 @@ body {
   width: 80%;
   margin: 2rem auto;
 }
+
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -103,6 +104,7 @@ body {
   flex: 1;
   text-align: left;
 }
+
 .about-section h2 {
   color: #00aaff;
   margin-bottom: 1rem;
@@ -112,14 +114,14 @@ body {
 
 .about-section p {
   line-height: 1.6;
-  width:80%;
+  width: 80%;
   color: #e0e0e0;
   text-align: left;
 }
 
 .about-image {
   margin: 1.5rem 0;
-  width:60%;
+  width: 60%;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -165,10 +167,31 @@ body {
   .team-photo img {
     width: 100%;
   }
-  .skills-table th, .skills-table td {
+
+  .skills-table th,
+  .skills-table td {
     font-size: 0.9rem;
     padding: 8px;
   }
+}
+
+/* ====== SKILLS PAGE STYLES (from teammate) ====== */
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #111827;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient(90deg, #22d3ee, #34d399);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .skills-table {
@@ -180,8 +203,8 @@ body {
 }
 
 .skills-table th {
-  background: rgba(34, 211, 238, 0.1); 
-  color: var(--brand);
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
   font-weight: 600;
   text-align: left;
   padding: 12px;
@@ -196,3 +219,12 @@ body {
 .skills-table tr:hover {
   background: rgba(255, 255, 255, 0.05);
 }
+
+@media (max-width: 600px) {
+  .skills-table th,
+  .skills-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
