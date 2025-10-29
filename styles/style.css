@@ -111,6 +111,7 @@ body {
 }
 
 .main-nav ul {
+
   list-style: none;
   display: flex;
   gap: 1.5rem;
@@ -119,8 +120,8 @@ body {
 }
 
 
-
 /* Responsive Nav */
+
 .main-nav a {
   color: #e0e0e0;
   text-decoration: none;
@@ -251,10 +252,10 @@ body {
   }
 
   .team-photo img {
+
     width: 100%;
   }
 }
-
 
 /* --- Projects Page Styles --- */
 .projects-section {
