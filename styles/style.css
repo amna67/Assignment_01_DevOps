@@ -1,37 +1,13 @@
-/* ===== Starry Background & General Layout ===== */
+/* ====== GENERAL LAYOUT ====== */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0b132b;
   color: #e0e0e0;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
-  opacity: 0.25;
-  animation: stars 200s linear infinite;
-  z-index: -1;
-}
-
-@keyframes stars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
-}
-
-.wrapper {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* ===== Navigation Bar ===== */
+/* ====== NAVIGATION BAR ====== */
 .main-nav {
   background-color: #1c2541;
   display: flex;
@@ -67,12 +43,9 @@ body::before {
 .main-nav a:hover,
 .main-nav a.active {
   color: #00aaff;
-  background: rgba(255,255,255,0.08);
-  border-radius: 6px;
-  padding: 6px 10px;
 }
 
-/* ===== Hero Section ===== */
+/* ====== HERO SECTION ====== */
 .hero-section {
   position: relative;
   background: url('../assets/hero.jpg') center/cover no-repeat;
@@ -108,7 +81,7 @@ body::before {
   color: #cde0ff;
 }
 
-/* ===== About Section ===== */
+/* ====== ABOUT SECTION ====== */
 .about-section {
   padding: 3rem 2rem;
   text-align: center;
@@ -117,7 +90,6 @@ body::before {
   width: 80%;
   margin: 2rem auto;
 }
-
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -131,7 +103,6 @@ body::before {
   flex: 1;
   text-align: left;
 }
-
 .about-section h2 {
   color: #00aaff;
   margin-bottom: 1rem;
@@ -141,14 +112,14 @@ body::before {
 
 .about-section p {
   line-height: 1.6;
-  width: 80%;
+  width:80%;
   color: #e0e0e0;
   text-align: left;
 }
 
 .about-image {
   margin: 1.5rem 0;
-  width: 60%;
+  width:60%;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -161,78 +132,17 @@ body::before {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== Skills Section ===== */
-.skills-section {
-  text-align: center;
-  margin: 60px 0;
-}
-
-.skills-section h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.skills-section h2 span {
-  background: linear-gradient(90deg,#22d3ee,#34d399);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-}
-
-.skill-box {
-  width: 120px;
-  height: 120px;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255,255,255,0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.skill-box i {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #e5e7eb;
-}
-
-.skill-box p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #e5e7eb;
-}
-
-.skill-box:hover {
-  transform: translateY(-8px) scale(1.05);
-  border-color: #22d3ee;
-  box-shadow: 0 10px 25px rgba(34,211,238,0.3);
-}
-
-/* ===== Footer ===== */
-.site-footer, .footer {
+/* ====== FOOTER ====== */
+.site-footer {
   background-color: #1c2541;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   color: #aaa;
   border-radius: 15px 15px 0 0;
   margin-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 900px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
+/* ====== RESPONSIVE DESIGN ====== */
 @media (max-width: 700px) {
   .main-nav ul {
     flex-direction: column;
@@ -255,14 +165,4 @@ body::before {
   .team-photo img {
     width: 100%;
   }
-
-  .skills-table th,
-  .skills-table td {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 500px) {
-  .skills-grid { grid-template-columns: 1fr; }
 }
