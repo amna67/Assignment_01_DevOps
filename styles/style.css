@@ -353,3 +353,170 @@ body {
 @media (max-width: 500px) {
   .skills-grid { grid-template-columns: 1fr; }
 }
+/* Profile card layout */
+.profile-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+  box-shadow: var(--shadow);
+  align-items: start;
+}
+
+/* Profile header */
+.profile-header h1 { margin:0; font-size:1.6rem; line-height:1.05; }
+.profile-header .lead { color:var(--muted); margin-top:8px; }
+
+/* Accent style */
+.accent { color: var(--accent); }
+
+/* Figure / photo */
+.profile-figure { margin:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px; }
+.profile-photo {
+  width: 320px; height:320px; object-fit:cover;
+  border-radius: 50%;
+  display:block;
+  box-shadow: 0 12px 30px rgba(12,18,35,0.55);
+  transition: transform .35s ease, filter .35s ease;
+  border: 6px solid rgba(255,255,255,0.03);
+  background: linear-gradient(135deg,var(--accent), var(--accent-2));
+}
+.profile-photo:hover,
+.profile-photo:focus {
+  transform: translateY(-6px) scale(1.02);
+  filter: brightness(1.06) saturate(1.05);
+  outline: 3px solid rgba(124,92,255,0.12);
+}
+
+/* Caption */
+.profile-caption { color:var(--muted); font-size:0.95rem; }
+
+/* About & education */
+.about, .education {
+  background: var(--glass);
+  padding:16px;
+  border-radius:12px;
+  margin-bottom:14px;
+}
+.about h2, .education h2 {
+  margin:0 0 10px 0;
+  font-size:1.05rem;
+}
+.edu-list {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.edu-list h3 {
+  margin:0;
+  font-size:0.98rem;
+}
+.edu-list p {
+  margin:4px 0 0 0;
+  color:var(--muted);
+  font-size:0.92rem;
+}
+
+/* 🔹 Contact section */
+.contact-info {
+  background: var(--glass);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.contact-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  color: var(--accent);
+  letter-spacing: 0.4px;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.contact-info .phone a,
+.contact-info .whatsapp a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+}
+
+.contact-info .phone a:hover,
+.contact-info .whatsapp a:hover,
+.contact-info .phone a:focus,
+.contact-info .whatsapp a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+  filter: brightness(1.2);
+}
+
+/* Small fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-actions {
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.btn {
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn.primary {
+  background: linear-gradient(90deg,var(--accent), var(--accent-2));
+  color:white;
+  box-shadow: 0 8px 20px rgba(124,92,255,0.15);
+}
+.btn.ghost {
+  background: transparent;
+  color:var(--text);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* Accessibility: focus visible */
+a:focus, button:focus, .btn:focus, .profile-photo:focus {
+  outline: 3px solid rgba(45,212,191,0.16);
+  outline-offset:3px;
+}
+
+/* Responsive adjustments (media query) */
+@media (max-width: 900px), (orientation: portrait) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding:20px;
+    gap:18px;
+  }
+
+  .profile-photo { width: 240px; height:240px; }
+  .container { padding:18px; }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .profile-photo { width: 180px; height:180px; }
+  .profile-header h1 { font-size:1.2rem; }
+  .profile-card { padding:16px; gap:12px; }
+  .top-nav { display:none; } /* hide nav on tiny screens (replace with menu if needed) */
+}
