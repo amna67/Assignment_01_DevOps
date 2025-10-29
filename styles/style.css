@@ -1,3 +1,56 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 6px 10px;
+}
+.nav a.active,
+.nav a:hover {
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+.brand {
+  font-weight: bold;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.card {
+  background: #111827;
+  border-radius: 10px;
+  padding: 20px;
+}
+h1 {
+  background: linear-gradient(90deg, #22d3ee, #34d399);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.footer {
+  text-align: center;
+  color: #9ca3af;
+  margin-top: 20px;
+}
+
+/* Skills Table Styling */
 .skills-table {
   width: 100%;
   border-collapse: collapse;
@@ -5,25 +58,23 @@
   overflow: hidden;
   border-radius: 10px;
 }
-
 .skills-table th {
-  background: rgba(34, 211, 238, 0.1); 
-  color: var(--brand);
+  background: rgba(34,211,238,0.1);
+  color: #22d3ee;
   font-weight: 600;
   text-align: left;
   padding: 12px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
 }
-
 .skills-table td {
   padding: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-
 .skills-table tr:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
 }
 
+/* Responsive tweak */
 @media (max-width: 600px) {
   .skills-table th, .skills-table td {
     font-size: 0.9rem;
